@@ -1478,6 +1478,17 @@ define Device/iptime_t5004
 endef
 TARGET_DEVICES += iptime_t5004
 
+define Device/jcg_jhr-ac860m
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := JCG
+  DEVICE_MODEL := JHR-AC860M
+  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3 \
+	kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += jcg_jhr-ac860m
+
 define Device/jcg_jhr-ac876m
   $(Device/dsa-migration)
   IMAGE_SIZE := 16064k
